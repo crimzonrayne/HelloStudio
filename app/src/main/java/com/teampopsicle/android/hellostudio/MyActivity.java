@@ -1,12 +1,13 @@
 package com.teampopsicle.android.hellostudio;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
-
-public class MyActivity extends ActionBarActivity {
+public class MyActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,23 +15,27 @@ public class MyActivity extends ActionBarActivity {
         setContentView(R.layout.activity_my);
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my, menu);
-        return true;
+    public void enterHearActivity(View view){
+        Intent intent = new Intent(view.getContext(),HearActivity.class);
+        startActivityForResult(intent, 1);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    public void enterSeeActivity(View view){
+        Context context = getApplicationContext();
+        CharSequence text = "AHH, IM BLIND!!!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context,text,duration);
+        toast.show();
     }
+
+    public void enterSmellActivity(View view){
+        Context context = getApplicationContext();
+        CharSequence text = "I Cant Let You Do That";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+    }
+
 }
