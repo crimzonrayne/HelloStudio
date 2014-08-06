@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</LinearLayout>
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/catButton"
+        android:src="@drawable/cat"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/dogButton"
+        android:src="@drawable/dog"
+        android:layout_toRightOf="@+id/catButton"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/cowButton"
+        android:src="@drawable/cow"
+        android:layout_below="@+id/catButton"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageButton4"
+        android:src="@drawable/butt"
+        android:layout_below="@+id/dogButton"
+        android:layout_toRightOf="@+id/cowButton"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tap To Hear!"
+        android:id="@+id/textView"
+        android:layout_below="@+id/cowButton"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

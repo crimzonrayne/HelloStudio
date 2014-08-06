@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="See!"
-        android:id="@+id/see-button"
+        android:id="@+id/see_button"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="88dp" />
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hear!"
-        android:id="@+id/hear-buton"
+        android:id="@+id/hear_buton"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -35,8 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Smell!"
-        android:id="@+id/smell-button"
-        android:layout_below="@+id/hear-buton"
+        android:id="@+id/smell_button"
+        android:layout_below="@+id/hear_buton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="69dp" />
 
